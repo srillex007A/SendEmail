@@ -11,8 +11,8 @@ const Contact = () => {
   const [number, setNumber] = useState('');
   const [message, setMessage] = useState('');
   // emails
-  const from = 'mehtabwarsi20@gmail.com';
-  const to = 'mehtabwarsi3@gmail.com';
+  const to = 'info@redpositive.in';
+  const from = 'mehtabwarsi3@gmail.com';
 
   // Handling email address
   const options = {
@@ -20,7 +20,7 @@ const Contact = () => {
     url: 'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '6fadc4c71emsh18b1b870cd38584p1ddda8jsn0b4b09200a4d',
+      'X-RapidAPI-Key': 'ea1e4a71e4msh4e6f66ae7be1cbfp1d843bjsn815ee1594767',
       'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
     },
     data: `{"personalizations":[{"to":[{"email":"${to}"}],"subject":"hello react native"}],"from":{"email":"${from}"},"content":[{"type":"text/plain","value":"${[
@@ -54,14 +54,12 @@ const Contact = () => {
         <TextInput
           mode="outlined"
           label="Name"
-          placeholder="Name"
           textContentType="name"
           onChangeText={text => setName(text)}
         />
         <TextInput
           mode="outlined"
           label="Email"
-          placeholder="Email"
           textContentType="emailAddress"
           keyboardType="email-address"
           onChangeText={text => setEmail(text)}
@@ -69,7 +67,6 @@ const Contact = () => {
         <TextInput
           mode="outlined"
           label="Mobile No"
-          placeholder="Mobile No"
           textContentType="telephoneNumber"
           keyboardType="numeric"
           onChangeText={text => setNumber(text)}
@@ -77,7 +74,6 @@ const Contact = () => {
         <TextInput
           mode="outlined"
           label="Message"
-          placeholder="Type something"
           multiline={true}
           numberOfLines={4}
           onChangeText={text => setMessage(text)}
